@@ -17,8 +17,11 @@ from edabit.Test import Test
 
 
 def card_hide(card):
-    card2 = card.replace(card, (len(card) - 4) * "*")           # I learned something myself
-    return card2 + card[-4:]
+    # card2 = card.replace(card, (len(card) - 4) * "*")
+    # return card2 + card[-4:]
+    card2 = card.replace(card[:-4], len(card[:-4]) * "*")
+    return card2
+
 
 
 if __name__ == '__main__':
